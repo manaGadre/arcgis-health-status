@@ -1,0 +1,11 @@
+{
+   "Feedback":{
+      "toEmail":"ResourceCtr-feedback@esri.com",
+      "sourceUrl":"regarding",
+      "subject":"User Feedback",
+      "formFields":"Feedback:userFeedback,Regarding the Page:regarding,Email Address:userEmail",
+      "requiredFields":"userFeedback",
+      "submitFieldName":"submitFeedback",
+      "emailFormat":"rich"
+   }
+}

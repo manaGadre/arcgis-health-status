@@ -1,0 +1,65 @@
+@import "calcite-web/imports";
+
+.home-banner {
+  .background-img {
+    height: 700px; // paradigm created by arcgis.com
+    background: url('/assets/images/tailcoat/banner.jpg') center center repeat-x;
+  }
+
+  h1 {
+    color: #111;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 24px;
+  }
+  .cta-home-button {
+    dislay: inline-block;
+    margin-right: 2em;
+  }
+}
+
+
+// Below does it belong in screen.css?
+.cta-button {
+    background: #EF8D36;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 13px;
+    padding: 10px 22px;
+    &:hover {
+      background: orange;
+      color: #FFF;
+    }
+}
+
+
+.background-wrapper {
+  background-size: cover;
+  height: 640px;
+  overflow: hidden !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.page-section {
+  background-position: top center;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  position: relative;
+  .bottom-flush {
+    margin-bottom: -6px;
+  }
+  a {
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+}

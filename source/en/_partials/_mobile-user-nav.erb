@@ -1,0 +1,14 @@
+<!-- Mobile Nav Drawer -->
+<nav class="drawer-nav drawer-right"> <!-- drawer-right will put the drawer on the right side. -->
+  <div class="drawer-header">
+    <h4 class="site-title user-name"  data-username></h4>
+  </div>
+  <ul>
+    <li>
+      <%= link_to t("site.nav.logged_in.feedback"), "/feedback/", :class => "drawer-link icon-comment" %>
+    </li>
+    <li>
+      <%= link_to t("site.nav.logged_in.sign_out"), "#", :class => "drawer-link icon-exit log-out-link" %>
+    </li>
+  </ul>
+</nav>

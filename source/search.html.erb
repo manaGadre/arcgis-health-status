@@ -1,0 +1,103 @@
+---
+title: Search Result
+css:
+  - /cdn/calcite/css/documentation
+  - searchResult
+
+
+js:
+  - sitecfg
+  - /cdn/js/libs/underscore
+  - /cdn/js/libs/backbone
+  - search/jxon
+  - search/searchcfg
+  - search/gsasearch
+
+
+metatags:
+  - <META name="robot" content="NOINDEX,NOFOLLOW">
+
+languageSelector: "No"
+
+mobile: true
+
+root: true
+---
+
+<div class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="text-white sub-nav-title" data-langlabel="search-results">Search Results</h1>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container leader-2 trailer-1 inithide">
+  <div class="column-4 trailer-2">
+    <aside id="searchFilter" role="tablist" aria-live="polite" class="column-4"></aside>
+
+  </div>
+  <main class="column-19 pre-1">
+    <div class="panel search-box wf-nav">
+      <div id="searchBox" class="wf-nav search-bar column-19 trailer-0 leader-0 padding-right-4 padding-left-0" style="height:55px">
+        <form id="gsaSearchForm" class="input-group">
+          <input type="search" placeholder="Search ArcGIS Enterprise content" data-langlabel="search-arcgis-server-content" name="q" id="query" class="input-group-input">
+          <span class="input-group-button">
+            <button class="icon-ui-search btn" type="submit"></button>
+          </span>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="row search-nav">
+      <div id="searchStat" class="column-9"></div>
+      <!--<div class="pre-1 column-2"></div>-->
+      <div id="searchLang" class="right column-5"></div>
+    </div>
+    <hr />
+
+    <div id="results">
+      <div id="spinner" class="loader is-active padding-leader-3 padding-trailer-3">
+        <div class="loader-bars"></div>
+        <div class="loader-text">Loading</div>
+      </div>
+
+      <!-- Result area -->
+      <div id="searchResult" class="display3">
+        <div class="clear"></div>
+      </div>
+      <!-- End of Result -->
+    </div>
+
+    <div id="searchPager">
+    </div>
+  </main>
+
+</div>
+
+<script>
+$(document).ready(function() {
+
+  dbg ("doc.ready");
+
+  app.util.changeL10NLabel ();
+
+  app.router = new app.SearchRouter();
+
+  app.qStmt = new app.QueryStatement;
+  app.qResult = new app.QueryResult;
+
+  app.searchBox = new app.SearchBoxView ({model:app.qStmt, el: $("#searchBox")});
+  app.searchFilter = new app.SearchFilterView ({model:app.qStmt, el: $("#searchFilter")});
+  app.searchLang = new app.SearchLangView ({model:app.qStmt, el: $("#searchLang")});
+
+  app.srPager = new app.SRPagerView ({model: app.qResult, el: $("#searchPager")});
+  app.srStat = new app.SRStatView ({model: app.qResult, el: $("#searchStat")});
+  app.srList = new app.SRListView ({model: app.qResult, el: $("#searchResult")});
+
+  Backbone.history.start({pushState: true, root: "/search/"});
+  $(".search-top-nav").hide();
+
+});
+</script>

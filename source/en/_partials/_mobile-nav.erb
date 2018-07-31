@@ -1,0 +1,17 @@
+<!-- Mobile Nav Drawer -->
+<nav class="drawer-nav" role="navigation">
+  <aside class="side-nav">
+    <h2 class="side-nav-title">ArcGIS Enterprise</h2>
+    <form id="helpSearchForm" class="site-search-form" method="GET" action="">
+      <input class="drawer-search" type="search" name="q" data-langlabel="search-arcgis-server" placeholder="Search ArcGIS Enterprise site">
+      <input type="hidden" name="collection" value="help">
+      <input type="hidden" name="product" value="<%= current_page.data.productMetaName ? current_page.data.productMetaName : '' %>">
+      <input type="hidden" name="language" value="en">
+    </form>
+    <%= link_to "Portal", '/en/portal/', "class" => "side-nav-link"  %>
+    <%= link_to "Server", '/en/server/', "class" => "side-nav-link"  %>
+    <%= link_to "Data Store", '/en/data-store/', "class" => "side-nav-link"  %>
+    <%= link_to "Cloud", '/en/cloud/', "class" => "side-nav-link"  %>
+    <%= link_to "Documentation", '/en/documentation/', "class" => "side-nav-link"  %>
+  </aside>
+</nav>

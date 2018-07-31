@@ -1,0 +1,97 @@
+ <script>
+			var insightsLookupTable = {
+				"what-is-insights-.htm" : "/get-started/get-started.htm",
+				"whats-new.htm" : "/reference/whats-new.htm",
+				"get-started.htm" : "/get-started/get-started.htm",
+				"get-started-with-workbooks.htm" : "/get-started/get-started-with-workbooks.htm",
+				"get-started-with-drag-and-drop.htm" : "/get-started/get-started-with-drag-and-drop.htm",
+				"get-started-with-analysis.htm" : "/get-started/get-started-with-analysis.htm",
+				"get-started-with-sharing.htm" : "/get-started/get-started-with-sharing.htm",
+				"get-started-faq.htm" : "/reference/faq.htm",
+				"10-insightful-tips-to-improve-your-work-life.htm" : "/get-started/insights-tips.htm",
+				"access-insights.htm" : "/get-started/access-insights.htm",
+				"create-your-first-workbook.htm" : "/get-started/quick-exercise-workbooks.htm",
+				"quick-exercise-college-scorecard.htm" : "/get-started/quick-exercise-spatial-analysis.htm",
+				"quick-exercise-share-analysis.htm" : "/get-started/quick-exercise-share-analysis.htm",
+				"add-data.htm" : "/create/add-data.htm",
+				"get-data-from-pro.htm" : "/create/publish-data-from-pro.htm",
+				"prepare-your-excel-data.htm" : "/create/prepare-your-excel-data.htm",
+				"create-a-database-connection.htm" : "/create/create-a-database-connection.htm",
+				"update-a-database-connection.htm" : "/reference/update-a-database-connection.htm",
+				"create-and-manage-workbooks.htm" : "/create/create-and-manage-workbooks.htm",
+				"calculate-a-field.htm" : "/create/calculate-a-field.htm",
+				"enable-locations.htm" : "/create/enable-locations.htm",
+				"change-dataset-and-field-properties.htm" : "/create/change-dataset-properties.htm",
+				"create-relationships-to-join-datasets.htm" : "/create/create-relationships.htm",
+				"create-a-map.htm" : "/create/create-maps.htm",
+				"visualization-catalog-for-insights.htm" : "/create/map-visualizations.htm",
+				"create-a-chart-or-table.htm" : "/create/create-charts.htm",
+				"bar-chart.htm" : "/create/bar-chart.htm",
+				"column-chart.htm" : "/create/column-chart.htm",
+				"donut-chart.htm" : "/create/donut-chart.htm",
+				"histogram.htm" : "/create/histogram.htm",
+				"scatter-plot.htm" : "/create/scatter-plot.htm",
+				"time-series.htm" : "/create/time-series.htm",
+				"treemap.htm" : "/create/treemap.htm",
+				"bubble-chart.htm" : "/create/bubble-chart.htm",
+				"line-graph.htm" : "/create/line-graph.htm",
+				"chord-diagram.htm" : "/create/chord-diagram.htm",
+				"data-clock.htm" : "/create/data-clock.htm",
+				"heat-chart.htm" : "/create/heat-chart.htm",
+				"box-plot.htm" : "/create/box-plot.htm",
+				"combo-chart.htm" : "/create/combo-chart.htm",
+				"summary-tables.htm" : "/create/summary-tables.htm",
+				"use-data-tables.htm" : "/create/use-data-tables.htm",
+				"interact-with-cards.htm" : "/create/interact-with-cards.htm",
+				"apply-spatial-analytics.htm" : "/analyze/perform-analysis.htm",
+				"create-buffer-drive-times.htm" : "/analyze/create-buffer-drive-times.htm",
+				"spatial-aggregation.htm" : "/analyze/spatial-aggregation.htm",
+				"spatial-filter.htm" : "/analyze/spatial-filter.htm",
+				"enrich-data.htm" : "/analyze/enrich-data.htm",
+				"calculate-density.htm" : "/analyze/calculate-density.htm",
+				"find-nearest.htm" : "/analyze/find-nearest.htm",
+				"find-answers.htm" : "/analyze/find-answers.htm",
+				"automate-analysis-with-models.htm" : "/analyze/automate-analysis-with-models.htm",
+				"share-your-work.htm" : "/share/share-your-work.htm",
+				"use-shared-workbooks.htm" : "/share/use-shared-workbooks.htm",
+				"faq.htm" : "/reference/faq.htm",
+				"essential-vocabulary-for-insights.htm" : "/reference/glossary.htm",
+				"version-support-insights-portal.htm" : "/reference/enterprise-compatibility.htm",
+				"localizing-insights.htm" : "/reference/localizing-insights.htm",
+				"geoanalytics-server-support.htm" : "/reference/geoanalytics-server-support.htm",
+				"supported-browsers-for-insights.htm" : "/reference/supported-browsers.htm",
+				"supported-databases-insights.htm" : "/reference/supported-databases.htm",
+				"database-privileges.htm" : "/reference/database-privileges.htm",
+				"supported-types-from-databases.htm" : "/reference/supported-types-from-databases.htm",
+				"understanding-data-in-relational-databases.htm" : "/reference/understanding-data-in-relational-databases.htm",
+				"database-data-caching.htm" : "/reference/database-data-caching.htm",
+				"troubleshoot-a-database-connection.htm" : "/reference/troubleshoot-a-database-connection.htm",
+				"install-insights-windows.htm" : "/administer/install-insights.htm",
+				"install-insights-linux.htm" : "/administer/install-insights.htm",
+				"configure-the-portal-to-support-insights-for-arcgis.htm" : "/administer/configure-portal.htm",
+				"configure-insights.htm" : "/administer/configure-insights.htm",
+				"configure-insights.htm" : "/administer/configure-insights.htm"
+				
+			}
+			var ref = window.location.href,
+			origRef = ref,
+			lg = "en";
+			fileName = "";
+			if (ref) {
+				 var hrefL = ref.split("/");
+				 if (hrefL.length > 3) {
+					  lg = hrefL[3];
+					  fileName = hrefL[hrefL.length -1]
+				 }
+				 if (ref.match( /(\/insights\/)/)){
+					var redirectURL = "http://doc.arcgis.com/"+lg+"/insights/"
+					var version = (ref.match( /(\/1.2\/)/))?"enterprise/1.2":"enterprise/latest";
+					if(insightsLookupTable[fileName]){
+						redirectURL = redirectURL + version + insightsLookupTable[fileName]
+					}
+					window.location.href = redirectURL;
+				 }
+				 
+			}
+
+		</script>

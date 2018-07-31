@@ -1,0 +1,56 @@
+<footer class="footer leader-0">
+  <div class="grid-container">
+    <nav class="column-6">
+      <h6 data-langlabel="arcgis-for-server">ArcGIS Enterprise</h6>
+      <ul class="list-plain">
+        <li><a href="/en/" data-langlabel="nav_home">Home</a></li>
+        <li><a href="/en/portal/" data-langlabel="nav_portal">Portal</a></li>
+        <li><a href="/en/server/" data-langlabel="nav_server">Server</a></li>
+        <li><a href="/en/data-store/" data-langlabel="nav_data-store">Data Stores</a></li>
+        <li><a href="/en/cloud/" data-langlabel="nav_cloud">Cloud</a></li>
+        <li><a href="/en/documentation/" data-langlabel="nav_documentation">Documentation</a></li>
+      </ul>
+    </nav>
+    <nav class="column-6">
+      <h6 data-langlabel="nav_arcgis_platform">ArcGIS Platform</h6>
+      <ul class="list-plain">
+        <li><a href="//www.arcgis.com">ArcGIS Online</a></li>
+        <li><a href="//desktop.arcgis.com/" data-langlabel="arcgis-for-desktop">ArcGIS Desktop</a></li>
+        <li><a href="//enterprise.arcgis.com/" data-langlabel="arcgis-for-server">ArcGIS Enterprise</a></li>
+        <li><a href="https://developers.arcgis.com" data-langlabel="arcgis-for-developers">ArcGIS for Developers</a></li>
+        <li><a href="//solutions.arcgis.com" data-langlabel="arcgis-solutions">ArcGIS Solutions</a></li>
+        <li><a href="//marketplace.arcgis.com" data-langlabel="arcgis-marketplace">ArcGIS Marketplace</a></li>
+      </ul>
+    </nav>
+    <nav class="column-6">
+      <h6 data-langlabel="about-esri">About Esri</h6>
+      <ul class="list-plain">
+        <li><a data-langlabel="about-us" href="//www.esri.com/about-esri/">About Us</a></li>
+        <li><a data-langlabel="careers" href="//www.esri.com/careers/">Careers</a></li>
+        <li><a data-langlabel="insiders-blog" href="//blogs.esri.com/esri/esri-insider/">Insiders Blog</a></li>
+        <li><a data-langlabel="user-conference" href="//www.esri.com/events/user-conference/index.html">User Conference</a></li>
+        <li><a data-langlabel="developer-summit" href="//www.esri.com/events/devsummit/index.html">Developer Summit</a></li>
+      </ul>
+    </nav>
+    <nav class="column-6">
+      <%= link_to "", "//www.esri.com/", class: "esri-logo" %>
+      <section class="footer-social-nav leader-1">
+        <%= link_to "", "https://twitter.com/Esri/", class: "icon-social-twitter" %>
+        <%= link_to "", "https://www.facebook.com/esrigis/", class: "icon-social-facebook" %>
+        <%= link_to "", "//esri.github.com/", class: "icon-social-github" %>
+        <%= link_to "", "//www.esri.com/about-esri/contact/", class: "icon-social-contact" %>
+      </section>
+      <section class="feedback-footer center-text">
+        <%= partial :"/en/_partials/feedback" %>
+      </section>
+    </nav>
+    <div class="column-24 leader-1">
+      <p class="font-size--3">
+        <a href="//www.esri.com/legal/copyright-trademarks">Copyright &copy; <%= Time.now.year %> Esri.</a> All rights reserved. |
+        <a href="//www.esri.com/legal/privacy/" data-langlabel="footer_privacy">Privacy</a> |
+        <a href="//www.esri.com/legal/software-license/" data-langlabel="footer_legal">Legal</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<a href="#" class="back-2-top icon-ui-up-arrow" data-langlabel="top">Top</a>

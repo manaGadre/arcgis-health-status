@@ -1,0 +1,130 @@
+/* need to clean this up */
+
+#searchBox {
+height: 30px;
+margin: 0 20px 0 10px;
+}
+
+.search-box {
+    background-color: #efeeef;
+    padding: 1em;
+    border-radius: 0.5em/0.5em;
+}
+
+#searchBox input[type="text"]
+{
+    position:absolute;
+    margin: 0 20px 0 10px;
+    height: 30px;
+    width: 610px;
+    color:#888;
+}
+
+#searchBox input[type="submit"] {
+    position:absolute;
+    margin: 3px 3px 0 590px;
+    background: url("/img/orangeMag.gif") no-repeat scroll center center transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    height:23px;
+}
+
+input, select, textarea {
+
+    display: table-cell;
+
+}
+input[type="text"]
+{
+    display: table-cell;
+}
+
+#spinner
+{
+    display: none;
+    min-height: 400px;
+    min-width: 500;
+    position: absolute;
+    top: 250px;
+    left: 300px;
+}
+
+#results
+{
+    min-height: 150px;
+    margin: 0 20px 0 15px;
+}
+
+.result {
+    clear: both;
+}
+p.resultMeta {
+    color: #999999;
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+}
+
+.result p {
+    line-height: 1.3em;
+}
+
+.result h3 {
+    line-height: 1em;
+}
+.result h3 a.searchTitle {
+    margin-bottom: 10px;
+}
+
+.display3 .item-snippet
+{
+    width: 400px;
+    display:inline-block;
+    margin: 10px 0 0 10px;
+}
+
+
+#searchPager
+{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.search-nav {
+    font-size: 12px;
+    margin: 1em 0px 0px 1em !important;
+}
+
+
+.search-pager {
+    list-style: none;
+}
+.search-pager >li {
+    list-style-type: none;
+    background: none;
+    display: inline;
+    padding-left: 0.25em;
+}
+.search-pager > li > a {
+    padding: 7px;
+    border: solid 1px #cecece;
+}      
+.search-pager > li > a.current {
+    background-color: #ccc;
+}
+
+.filter-header {
+	background-color: #efeeef;
+    border-bottom: 1px solid #ededed;
+    display: block;
+    margin: 0;
+	padding: 6px;
+}
+#searchPager ul li {
+    padding-left: 0.25em;
+}
+#searchPager ul li:before {
+    background: none;
+}
+

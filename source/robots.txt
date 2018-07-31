@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /login/
+Disallow: /sign-in/
+Disallow: /sign-up/
+Disallow: /search
+
+Sitemap: http://enterprise.arcgis.com/sitemap_index.xml

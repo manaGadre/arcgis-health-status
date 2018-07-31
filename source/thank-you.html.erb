@@ -1,0 +1,55 @@
+---
+title: Thank You
+css:
+  - feedback
+
+js:
+  - app-feedback
+
+metatags:
+  - <META name="robot" content="NOINDEX|NOFOLLOW">
+
+languageSelector: "No"
+
+mobile: true
+nofeedback: true
+root: true
+---
+
+<div class="sub-nav" role="banner">
+  <div class="grid-container">
+    <div class="column-24">
+      <h1 class="text-white sub-nav-title" data-langlabel="feedback">Feedback</h1>
+    </div>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="grid-container feedback">
+   <div class="main leader-2">
+      <div class="thank-you panel panel-white leader-2 column-16 pre-4 post-4 trailer-2">
+        <h2 data-langlabel="feedback-thank-you">Thank you!</h2>
+          <section>
+            <p data-langlabel="feedback-confirmation-note">You just helped us make this site a little better. We always take feedback seriously. It improves the site for everyone. Thanks again!</p>
+          </section>
+
+          <p>
+          <strong><span id="referPageLink"></span></strong>
+          </p>
+          </div>
+  </div> <!-- end of row main -->
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+    var docCfg = docCfg || {},
+        urlLang = doc.l10n.getReferrerLang(),
+        curlang = doc.l10n.calcPrefLang (docCfg["langSelector"] || "all", urlLang);
+        doc.supportForm.addReferrerLink(curlang);
+    if (doc.l10n.isSupportedLang(curlang) && !doc.l10n.isEN (curlang)) {
+      doc.l10n.changeLabel (curlang);
+    }
+        });
+</script>
